@@ -97,7 +97,7 @@ func main() {
 	starttime := time.Now()
 
 	// enumerating phases
-	log.FromContext(ctx).Infof("there are 9 phases which will be executed followed by a success message:")
+	log.FromContext(ctx).Infof("there are  phases which will be executed followed by a success message:")
 	log.FromContext(ctx).Infof("the phases include:")
 	log.FromContext(ctx).Infof("1: get config from environment")
 	log.FromContext(ctx).Infof("2: run vpp and get a connection to it")
