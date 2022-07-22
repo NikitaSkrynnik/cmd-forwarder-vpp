@@ -15,8 +15,19 @@ jobs:
     needs: [check-mergeability]
     uses: networkservicemesh/.github/.github/workflows/automerge.yaml@main
 
-  resolve_conflicts:
+  debug:
     needs: [check-mergeability]
+    if: always() && needs.check-mergeability.result == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update version manually
+        run: |
+          echo REF: $PR_BRANCH_REF
+        env:
+          PR_BRANCH_REF: ${{ needs.check-mergeability.outputs.pr_branch_ref }}
+
+  resolve_conflicts:
+    needs: [check-mergeability, debug]
     if: always() && needs.check-mergeability.result == 'failure' && needs.check-mergeability.outputs.pr_branch_ref != ""
     uses: NikitaSkrynnik/.github/.github/workflows/resolve-conflicts.yaml@fix-check-mergeability
     with:
