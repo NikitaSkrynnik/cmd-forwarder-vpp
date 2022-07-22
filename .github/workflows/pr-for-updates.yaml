@@ -8,4 +8,4 @@ jobs:
   auto-pull-request:
     uses: networkservicemesh/.github/.github/workflows/pr-for-updates.yaml@main
     secrets:
-      token: ${{ secrets.NSM_BOT_GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
