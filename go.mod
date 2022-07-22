@@ -14,9 +14,7 @@ require (
 	github.com/google/uuid v1.2.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/networkservicemesh/api v1.4.1-0.20220711153918-a59689088578
-	github.com/networkservicemesh/sdk v1.4.0
-	github.com/networkservicemesh/sdk-k8s v1.4.0
-	github.com/networkservicemesh/sdk-sriov v1.4.0
+	github.com/networkservicemesh/sdk v0.5.1-0.20220722102155-cbf511a6cd1e
 	github.com/networkservicemesh/sdk-vpp v0.0.0-20220721234741-907f8637813a
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.8.1
@@ -49,7 +47,6 @@ require (
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/lunixbochs/struc v0.0.0-20200521075829-a4cb8d33dbbe // indirect
-	github.com/networkservicemesh/sdk-kernel v1.4.0 // indirect
 	github.com/open-policy-agent/opa v0.16.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
