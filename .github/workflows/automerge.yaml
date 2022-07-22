@@ -17,7 +17,7 @@ jobs:
 
   resolve_conflicts:
     needs: [check-mergeability]
-    if: ${{ always() && needs.check-mergeability.result == 'failure'}}
+    if: ${{ always() && needs.check-mergeability.result == 'failure' && needs.check-mergeability.outputs.pr_branch_ref != ''}}
     uses: NikitaSkrynnik/.github/.github/workflows/resolve-conflicts.yaml@fix-check-mergeability
     with:
       pr_branch_ref: "update/test"
