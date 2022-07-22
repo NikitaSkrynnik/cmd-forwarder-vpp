@@ -7,7 +7,7 @@ on:
 jobs:
   check-mergeability:
     if: ${{ github.actor == 'NikitaSkrynnik' }}
-    uses: networkservicemesh/.github/.github/workflows/check-mergeability.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/check-mergeability.yaml@fix-check-mergeability
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
