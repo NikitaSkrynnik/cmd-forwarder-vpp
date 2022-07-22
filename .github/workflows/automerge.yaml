@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Update version manually
         run: |
-          echo "REFFF: $PR_BRANCH_REF"
+          echo "REFFFF: $PR_BRANCH_REF"
         env:
           PR_BRANCH_REF: ${{ needs.check-mergeability.outputs.pr_branch_ref }}
 
