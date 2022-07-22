@@ -16,7 +16,8 @@ jobs:
     uses: networkservicemesh/.github/.github/workflows/automerge.yaml@main
 
   resolve_conflicts:
-    if: ${{ always() && needs.check-mergeability.result == 'failure' && needs.check-mergeability.outputs.pr_branch_ref != '' }}
+    needs: [check-mergeability]
+    if: ${{ always() && needs.check-mergeability.result == 'failure' }}
     uses: networkservicemesh/.github/.github/workflows/resolve-conflicts.yaml@main
     with:
       pr_branch_ref: ${{ needs.check-mergeability.outputs.pr_branch_ref }}
